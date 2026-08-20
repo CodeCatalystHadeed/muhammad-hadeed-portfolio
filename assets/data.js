@@ -204,17 +204,17 @@ window.PORTFOLIO_DATA = {
         {
             title: "Backend & APIs",
             icon: "workflow",
-            items: ["FastAPI", "REST APIs", "Node.js", "Express.js", "WebSockets"]
+            items: ["FastAPI", "REST APIs", "Node.js", "Express.js", "WebSockets", "Celery"]
         },
         {
             title: "Databases",
             icon: "server",
-            items: ["PostgreSQL", "MongoDB", "SQL", "MySQL"]
+            items: ["PostgreSQL", "MongoDB", "SQL", "MySQL", "Redis"]
         },
         {
             title: "Frontend",
             icon: "panels-top-left",
-            items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"]
+            items: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"]
         },
         {
             title: "Engineering Tools",
