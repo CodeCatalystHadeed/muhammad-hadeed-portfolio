@@ -9,6 +9,41 @@ window.PORTFOLIO_DATA = {
 
     projects: [
         {
+            title: "ShipFlow — Delivery Management Platform",
+            category: "Backend",
+            icon: "folder-kanban",
+            accent: "blue",
+            stack: [
+                "Python",
+                "FastAPI",
+                "PostgreSQL",
+                "Redis",
+                "Celery",
+                "React",
+                "TypeScript",
+                "React Router",
+                "SQLAlchemy",
+                "Alembic",
+                "JWT",
+                "Docker",
+                "Twilio"
+            ],
+            summary: "A full-stack delivery management platform for sellers and delivery partners, with shipment creation, public tracking, delivery workflows, background jobs, and notification support.",
+            problem: "Delivery workflows need reliable coordination between sellers, delivery partners, and customers. Shipment creation, status changes, tracking, authentication, notifications, and background processing must stay consistent across several connected services.",
+            solution: "ShipFlow combines a FastAPI backend with a React and TypeScript frontend. PostgreSQL stores application data, Redis and Celery handle background work, JWT secures API access, and email/SMS integrations support shipment notifications. Docker Compose is used to run the backend services consistently during development.",
+            highlights: [
+                "Built seller and delivery-partner authentication and shipment workflows.",
+                "Implemented shipment status tracking and customer-facing tracking pages.",
+                "Developed FastAPI REST APIs with JWT-based authentication.",
+                "Used PostgreSQL with SQLAlchemy and Alembic for persistence and migrations.",
+                "Integrated Redis and Celery for background job processing.",
+                "Added email and SMS notification workflows, including Twilio support.",
+                "Built the frontend with React, TypeScript, React Router, Tailwind CSS, and Radix UI.",
+                "Used Docker and Docker Compose for repeatable local backend infrastructure."
+            ],
+            github: "https://github.com/CodeCatalystHadeed/ShipFlow"
+        },
+        {
             title: "JobEZ — AI-Enabled Recruitment Platform",
             category: "AI / ML",
             icon: "briefcase-business",
