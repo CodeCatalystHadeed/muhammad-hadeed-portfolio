@@ -13,6 +13,7 @@
     "chart-no-axes-combined": '<path d="M12 16v5"/><path d="M16 14v7"/><path d="M20 10v11"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.708 0L2 15"/><path d="M4 18v3"/><path d="M8 14v7"/>',
     "code-2": '<path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/>',
     "copy": '<rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>',
+    "external-link": '<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/>',
     "file-text": '<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13h8"/><path d="M8 17h8"/>',
     "folder-kanban": '<path d="M2 7h5l2 2h13"/><path d="M5 13h14"/><path d="M12 13v6"/><rect width="20" height="16" x="2" y="4" rx="2"/>',
     "github": '<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.28-.36 6.72-1.61 6.72-7.25A5.65 5.65 0 0 0 19.22 3.3 5.4 5.4 0 0 0 19.08 1S17.9.65 15 2.48a13.38 13.38 0 0 0-7 0C5.1.65 3.92 1 3.92 1a5.4 5.4 0 0 0-.14 2.3A5.65 5.65 0 0 0 2.28 7.3c0 5.6 3.44 6.85 6.72 7.25A4.8 4.8 0 0 0 8 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>',
@@ -91,6 +92,7 @@
           <div class="tech-list">${project.stack.slice(0, 8).map((tech) => `<span>${tech}</span>`).join("")}${project.stack.length > 8 ? `<span class="tech-more">+${project.stack.length - 8}</span>` : ""}</div>
           <div class="project-actions">
             <button class="project-detail" type="button" data-project="${projectIndex}">Details ${iconSvg("arrow-up-right")}</button>
+            ${project.live ? `<a href="${project.live}" target="_blank" rel="noreferrer">Live Demo ${iconSvg("external-link")}</a>` : ""}
             <a href="${project.github}" target="_blank" rel="noreferrer">GitHub ${iconSvg("github")}</a>
           </div>
         </div>
@@ -169,6 +171,7 @@
 
       <div class="dialog-actions">
         <a class="btn primary" href="${project.github}" target="_blank" rel="noreferrer">${iconSvg("github")} View on GitHub</a>
+        ${project.live ? `<a class="btn" href="${project.live}" target="_blank" rel="noreferrer">${iconSvg("external-link")} Live Demo</a>` : ""}
       </div>
     `;
 

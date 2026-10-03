@@ -5,9 +5,37 @@
 */
 
 window.PORTFOLIO_DATA = {
-    categories: ["All", "AI / ML", "Backend", "Full Stack", "Java"],
+    categories: ["All", "AI / ML", "Backend", "Full Stack", "Mobile", "Java"],
 
     projects: [
+        {
+            title: "AI Cold Email Generator",
+            category: "AI / ML",
+            icon: "sparkles",
+            accent: "cyan",
+            stack: [
+                "Python",
+                "LangChain",
+                "Groq",
+                "LLMs",
+                "Streamlit",
+                "Pydantic",
+                "Prompt Engineering",
+                "Structured Output"
+            ],
+            summary: "An AI-powered application that parses unstructured job descriptions, extracts role criteria with Pydantic validation, and generates tailored cold outreach emails.",
+            problem: "Crafting tailored cold outreach emails for job opportunities requires manually analyzing lengthy descriptions, identifying critical skills, and aligning personal achievements—a time-consuming process that often leads to generic, low-converting messages.",
+            solution: "Built an end-to-end LLM application utilizing LangChain and Groq for high-speed inference, enforcing schema-based structured entity extraction with Pydantic, and dynamically tailoring outreach emails to candidate credentials in an interactive Streamlit UI.",
+            highlights: [
+                "Engineered modular LangChain workflows powered by Groq for sub-second LLM inference.",
+                "Extracted and validated key criteria (role, company, required skills) with Pydantic schemas.",
+                "Designed dynamic prompt templates aligning candidate credentials with job descriptions.",
+                "Built and deployed an interactive web application on Streamlit Community Cloud.",
+                "Integrated secure API key handling, environment configuration, and safe user-facing error flows."
+            ],
+            github: "https://github.com/CodeCatalystHadeed/cold-email-generator",
+            live: "https://cold-email-assistant-ai.streamlit.app/"
+        },
         {
             title: "ShipFlow — Delivery Management Platform",
             category: "Backend",
@@ -44,11 +72,51 @@ window.PORTFOLIO_DATA = {
             github: "https://github.com/CodeCatalystHadeed/ShipFlow"
         },
         {
+            title: "ForgePy — Python Project Scaffolder",
+            category: "Backend",
+            icon: "wrench",
+            accent: "green",
+            stack: [
+                "Python",
+                "CLI",
+                "Typer",
+                "Project Architecture",
+                "Developer Tooling",
+                "Automation",
+                "Templates"
+            ],
+            summary: "A deterministic CLI tool that scaffolds production-ready Python projects (FastAPI, RAG, AI Agents, LangGraph, ML) with direct dependencies, testing, and starter implementations.",
+            problem: "Starting new Python and AI projects repeatedly requires manual folder layout setup, dependency selection, environment configuration, and test scaffolding before any actual application logic can be written.",
+            solution: "Developed ForgePy, an interactive developer CLI that generates tailored, repeatable project architectures in seconds without AI hallucinations or heavy runtime overhead, getting engineers from idea to business logic immediately.",
+            highlights: [
+                "Engineered an interactive terminal CLI using Typer and rich prompt dialogs.",
+                "Built starter blueprints for FastAPI APIs, RAG pipelines, AI Agents, LangGraph, and ML projects.",
+                "Designed deterministic template generation ensuring repeatable, reliable project initialization.",
+                "Pre-configured dependency management, environment isolation, linting, and Pytest suites.",
+                "Encapsulated clean architecture principles and idiomatic folder structures across all blueprints."
+            ],
+            github: "https://github.com/CodeCatalystHadeed/forgepy"
+        },
+        {
             title: "JobEZ — AI-Enabled Recruitment Platform",
             category: "AI / ML",
             icon: "briefcase-business",
             accent: "blue",
-            stack: ["Python", "FastAPI", "PostgreSQL", "OpenAI API", "ChromaDB", "Semantic Search", "Vector Retrieval", "Embeddings", "NLP", "Cosine Similarity", "REST APIs", "Speech-to-Text", "Text-to-Speech"],
+            stack: [
+                "Python",
+                "FastAPI",
+                "PostgreSQL",
+                "OpenAI API",
+                "ChromaDB",
+                "Semantic Search",
+                "Vector Retrieval",
+                "Embeddings",
+                "NLP",
+                "Cosine Similarity",
+                "REST APIs",
+                "Speech-to-Text",
+                "Text-to-Speech"
+            ],
             summary: "An AI-enabled recruitment platform that combines resume processing, semantic job matching, personalized recommendations, and AI-assisted preliminary interview workflows.",
             problem: "Recruitment teams often spend significant time manually reviewing resumes and comparing candidate profiles against job requirements. Candidates also struggle to quickly identify opportunities that genuinely align with their skills, experience, and background.",
             solution: "JobEZ automates key parts of the recruitment workflow by processing resumes, generating semantic representations with OpenAI embeddings, storing and retrieving vector data through ChromaDB, and matching candidate profiles with relevant jobs using retrieval and cosine-similarity-based ranking. It also exposes these capabilities through FastAPI endpoints, stores structured application data in PostgreSQL, and supports preliminary interview workflows with Speech-to-Text and Text-to-Speech.",
@@ -62,14 +130,74 @@ window.PORTFOLIO_DATA = {
                 "Used PostgreSQL for structured application data and persistence.",
                 "Integrated Speech-to-Text and Text-to-Speech for preliminary interview workflows."
             ],
-            github: "https://github.com/CodeCatalystHadeed"
+            github: "https://github.com/CodeCatalystHadeed/Jobez"
+        },
+        {
+            title: "Fathom AI — Meeting Intelligence Platform",
+            category: "Full Stack",
+            icon: "radio-tower",
+            accent: "purple",
+            stack: [
+                "TypeScript",
+                "React",
+                "Tailwind CSS",
+                "AI Summarization",
+                "Audio Sync",
+                "State Management",
+                "Vite"
+            ],
+            summary: "A post-meeting intelligence platform rebuild featuring meeting playback, synchronized multi-speaker transcripts, automated AI summaries, key moments, and clip sharing.",
+            problem: "Post-meeting workflows often lack seamless coordination between audio playback, timestamped transcripts, actionable takeaways, and shareable clips.",
+            solution: "Engineered a local-first meeting intelligence application featuring timestamp-synchronized transcripts, speaker attribution, structured AI summary templates (Executive, Sales, 1:1), and a client-side clip editor with validated sharing routes.",
+            highlights: [
+                "Implemented timestamp-to-playback synchronization for 80+ moment multi-speaker transcripts.",
+                "Built specialized AI summary templates for General, Sales, Project Update, and 1:1 meetings.",
+                "Created persistent action items, key moments, and a validated clip editor with start/end trim controls.",
+                "Engineered public-style share routes that function independently without creator browser storage.",
+                "Delivered a polished, responsive interface built with React, TypeScript, and Tailwind CSS."
+            ],
+            github: "https://github.com/CodeCatalystHadeed/fathom-rebuild"
+        },
+        {
+            title: "Campus Course Portal",
+            category: "Mobile",
+            icon: "phone",
+            accent: "blue",
+            stack: [
+                "Flutter",
+                "Dart",
+                "Mobile App Development",
+                "State Management",
+                "Form Validation",
+                "Session Persistence"
+            ],
+            summary: "A Flutter multi-screen mobile application featuring authentication, real-time validation, session persistence, dashboard navigation, and subject details.",
+            problem: "Academic course portals need responsive, reliable mobile interfaces that provide secure registration, validation feedback, and persistent sessions across devices.",
+            solution: "Developed a structured Flutter application implementing multi-screen authentication flows, real-time form validation with password security rules, SharedPreferences session persistence, and an interactive course discovery dashboard.",
+            highlights: [
+                "Developed user registration and login workflows with real-time field validation.",
+                "Implemented secure password verification (character count, uppercase, special characters).",
+                "Integrated Remember Me session persistence using shared_preferences.",
+                "Constructed dynamic dashboard navigation with interactive subject detail views.",
+                "Structured codebase separating UI components, validation services, controllers, and models."
+            ],
+            github: "https://github.com/CodeCatalystHadeed/Campus-Course-Portal"
         },
         {
             title: "Sentiment Analysis API",
             category: "AI / ML",
             icon: "messages-square",
             accent: "green",
-            stack: ["Python", "FastAPI", "scikit-learn", "NLP", "Text Preprocessing", "Tokenization", "Feature Extraction", "REST API"],
+            stack: [
+                "Python",
+                "FastAPI",
+                "scikit-learn",
+                "NLP",
+                "Text Preprocessing",
+                "Tokenization",
+                "Feature Extraction",
+                "REST API"
+            ],
             summary: "A machine-learning-powered NLP service that analyzes textual feedback, classifies it as positive, negative, or neutral, and exposes predictions through a FastAPI REST API.",
             problem: "Organizations can receive large volumes of text through reviews, surveys, support messages, and feedback forms. Manually reading and categorizing every response is difficult to scale and makes it harder to identify overall sentiment quickly and consistently.",
             solution: "The project implements an end-to-end NLP inference pipeline that cleans incoming text, applies preprocessing and tokenization, converts text into model-ready features, and uses a scikit-learn classifier to predict sentiment. FastAPI exposes the model through a REST endpoint so other applications can request predictions programmatically.",
@@ -82,14 +210,23 @@ window.PORTFOLIO_DATA = {
                 "Structured request and response flows for integration with external applications.",
                 "Separated preprocessing, prediction, and API concerns to keep the service easier to maintain."
             ],
-            github: "https://github.com/CodeCatalystHadeed"
+            github: "https://github.com/CodeCatalystHadeed/sentiment-analysis-nlp-api"
         },
         {
             title: "Titanic Survival Prediction",
             category: "AI / ML",
             icon: "chart-no-axes-combined",
             accent: "purple",
-            stack: ["Python", "Pandas", "NumPy", "scikit-learn", "Matplotlib", "EDA", "Feature Engineering", "Classification"],
+            stack: [
+                "Python",
+                "Pandas",
+                "NumPy",
+                "scikit-learn",
+                "Matplotlib",
+                "EDA",
+                "Feature Engineering",
+                "Classification"
+            ],
             summary: "An end-to-end supervised machine-learning project using the Titanic dataset to explore passenger data, engineer useful features, train a predictive model, and evaluate survival outcomes.",
             problem: "Real-world tabular datasets often contain missing values, inconsistent entries, categorical fields, and features that cannot be used directly by machine-learning algorithms. Building a reliable model therefore requires careful exploration and preparation before training begins.",
             solution: "The project follows a complete tabular ML workflow: exploratory data analysis, missing-value investigation, cleaning, transformation, feature engineering, supervised classification, evaluation, and visualization. The emphasis is on converting raw passenger records into a consistent dataset that can support meaningful survival predictions.",
@@ -102,14 +239,23 @@ window.PORTFOLIO_DATA = {
                 "Evaluated predictive performance using standard ML evaluation techniques.",
                 "Visualized data patterns and model-related insights using Python libraries."
             ],
-            github: "https://github.com/CodeCatalystHadeed"
+            github: "https://github.com/CodeCatalystHadeed/titanic-survival-prediction-ml"
         },
         {
             title: "EventSphere",
             category: "Full Stack",
             icon: "ticket-check",
             accent: "orange",
-            stack: ["React", "Node.js", "Express.js", "MongoDB", "JavaScript", "REST APIs", "Authentication", "Payment Integration"],
+            stack: [
+                "React",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "JavaScript",
+                "REST APIs",
+                "Authentication",
+                "Payment Integration"
+            ],
             summary: "A full-stack event ticketing platform that connects event discovery, ticket selection, cart management, authentication, checkout, and payment workflows in one responsive application.",
             problem: "Event registration platforms must coordinate multiple connected user journeys. Friction between event browsing, ticket selection, authentication, cart state, checkout, or payment handling can interrupt purchases and create a poor experience across devices.",
             solution: "EventSphere combines a React frontend with Node.js and Express.js backend services plus MongoDB persistence to deliver a connected event-ticketing flow. The application brings together browsing, ticket selection, authentication, cart management, checkout, and payment integration while maintaining a responsive interface for desktop and mobile users.",
@@ -130,7 +276,16 @@ window.PORTFOLIO_DATA = {
             category: "Full Stack",
             icon: "radio-tower",
             accent: "cyan",
-            stack: ["React", "Node.js", "Express.js", "MongoDB", "JavaScript", "WebSockets", "Live Voting", "Real-Time Chat"],
+            stack: [
+                "React",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "JavaScript",
+                "WebSockets",
+                "Live Voting",
+                "Real-Time Chat"
+            ],
             summary: "A real-time MERN debating platform with live voting, participant interaction, dynamic chat, WebSocket-based updates, and persistent debate data.",
             problem: "Traditional discussion platforms are usually designed around asynchronous comments rather than live interaction. A debate experience needs low-latency communication so messages, votes, and participant activity can be reflected immediately for everyone involved.",
             solution: "Virtual Debate uses React for the interactive client, Node.js and Express.js for server-side functionality, WebSockets for real-time communication, and MongoDB for persistent user and debate data. The architecture supports live discussion features without requiring users to refresh the page for updates.",
@@ -151,7 +306,15 @@ window.PORTFOLIO_DATA = {
             category: "Full Stack",
             icon: "shopping-cart",
             accent: "pink",
-            stack: ["React", "Node.js", "Express.js", "MongoDB", "JavaScript", "Manual Testing", "UI Testing"],
+            stack: [
+                "React",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "JavaScript",
+                "Manual Testing",
+                "UI Testing"
+            ],
             summary: "A MERN-stack e-commerce application covering core shopping workflows, with my contribution centered on validating product selection, cart behavior, checkout, and interface consistency.",
             problem: "E-commerce applications depend on reliable user journeys. Problems in product selection, cart updates, checkout behavior, or visual consistency can directly affect usability and prevent customers from completing purchases successfully.",
             solution: "My contribution focused on validating the shopping experience from product selection through checkout. I tested core functionality, reviewed UI consistency, identified usability and functional issues, and reported findings so the development team could improve reliability across the application.",
@@ -172,7 +335,14 @@ window.PORTFOLIO_DATA = {
             category: "Java",
             icon: "list-checks",
             accent: "yellow",
-            stack: ["Java", "MySQL", "Git", "OOP", "Debugging", "Manual Testing"],
+            stack: [
+                "Java",
+                "MySQL",
+                "Git",
+                "OOP",
+                "Debugging",
+                "Manual Testing"
+            ],
             summary: "A Java and MySQL quiz management application designed around quiz creation, management, scoring accuracy, and dependable interaction with quiz data, with my work focused on testing and bug fixing.",
             problem: "Quiz systems need accurate scoring and dependable management workflows. Bugs in quiz creation, answer handling, result calculation, or data interaction can directly reduce trust in the application and disrupt core user tasks.",
             solution: "My contribution focused on validating the application's essential workflows, reproducing and identifying functional issues, fixing bugs, and verifying scoring behavior so the system remained more reliable during quiz creation, management, and result handling.",
@@ -194,7 +364,7 @@ window.PORTFOLIO_DATA = {
         {
             title: "Generative AI & Agents",
             icon: "sparkles",
-            items: ["LLMs", "Generative AI", "LangChain", "Ollama", "RAG", "Prompt Engineering", "Agentic AI"]
+            items: ["LLMs", "Generative AI", "LangChain", "Groq", "Ollama", "RAG", "Prompt Engineering", "Agentic AI"]
         },
         {
             title: "Machine Learning & Data",
@@ -204,22 +374,22 @@ window.PORTFOLIO_DATA = {
         {
             title: "Backend & APIs",
             icon: "workflow",
-            items: ["FastAPI", "REST APIs", "Node.js", "Express.js", "WebSockets", "Celery"]
+            items: ["FastAPI", "REST APIs", "Node.js", "Express.js", "WebSockets", "Celery", "Pydantic"]
         },
         {
             title: "Databases",
             icon: "server",
-            items: ["PostgreSQL", "MongoDB", "SQL", "MySQL", "Redis"]
+            items: ["PostgreSQL", "MongoDB", "SQL", "MySQL", "Redis", "ChromaDB"]
         },
         {
-            title: "Frontend",
+            title: "Frontend & Mobile",
             icon: "panels-top-left",
-            items: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"]
+            items: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Streamlit", "Flutter", "Dart"]
         },
         {
             title: "Engineering Tools",
             icon: "wrench",
-            items: ["Git", "Docker", "VS Code", "Postman", "Java"]
+            items: ["Git", "Docker", "VS Code", "Postman", "Typer CLI", "Java"]
         }
     ],
 

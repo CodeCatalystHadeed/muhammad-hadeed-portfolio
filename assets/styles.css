@@ -181,7 +181,7 @@ section { padding: 92px 0; }
 .project-body p { color: var(--muted); margin: 0 0 18px; }
 .tech-list { display: flex; flex-wrap: wrap; gap: 7px; }
 .tech-list span, .stack-items span { border: 1px solid var(--line); background: color-mix(in srgb, var(--surface-2) 75%, transparent); border-radius: 999px; padding: 7px 10px; color: var(--muted); font-size: .8rem; }
-.project-actions { display: flex; justify-content: space-between; align-items: center; gap: 14px; border-top: 1px solid var(--line); margin-top: auto; padding-top: 18px; }
+.project-actions { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid var(--line); margin-top: auto; padding-top: 18px; flex-wrap: wrap; }
 .project-actions a, .project-detail { color: var(--muted); display: inline-flex; align-items: center; gap: 7px; font-size: .88rem; font-weight: 700; }
 .project-detail { border: 0; background: none; padding: 0; cursor: pointer; }
 .project-actions a:hover, .project-detail:hover { color: var(--text); }
@@ -232,8 +232,9 @@ section { padding: 92px 0; }
 .dialog-tech { margin: 22px 0; }
 .detail-list { padding-left: 20px; color: var(--muted); margin: 0 0 26px; }
 .detail-list li { margin: 8px 0; }
+.dialog-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); }
 
-.back-to-top { position: fixed; right: 22px; bottom: 22px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--text); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(10px); transition: .2s ease; z-index: 30; }
+.back-to-top { position: fixed; right: 22px; bottom: 84px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--text); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(10px); transition: .2s ease; z-index: 30; }
 .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
 
 footer { padding: 28px 0 40px; color: var(--muted); font-size: .88rem; }
